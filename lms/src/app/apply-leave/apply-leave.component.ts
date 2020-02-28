@@ -21,15 +21,11 @@ export class ApplyLeaveComponent implements OnInit {
         this.result = x;
         
       })
-      // setTimeout(() => {
-      //   this._router.navigate(['/Dashboard'])
-      //   ,10000}
-      //   )
-       
-       
+      setTimeout(() => {
+        this._router.navigate(['/Dashboard'])
+        }
+        ,1000);
   }
-
   ngOnInit(): void {
   }
-
 }

@@ -13,6 +13,7 @@ import { ManagerDetailsComponent } from './manager-details/manager-details.compo
 import { LeaveHistoryComponent } from './leave-history/leave-history.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { LeaveApplicationComponent } from './leave-application/leave-application.component';
+import { PendingLeavesComponent } from './pending-leaves/pending-leaves.component';
 
 const appRoutes : Routes = [
  
@@ -31,7 +32,8 @@ const appRoutes : Routes = [
     ManagerDetailsComponent,
     LeaveHistoryComponent,
     ApplyLeaveComponent,
-    LeaveApplicationComponent
+    LeaveApplicationComponent,
+    PendingLeavesComponent
   ],
   imports: [
     BrowserModule,
