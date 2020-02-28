@@ -1,0 +1,25 @@
+<h1 align = center>ALL EMPLOYEES</h1>
+<table border="3" align = center>
+    <tr>
+        <th>Employ No</th>
+        <th>Full Name</th>
+        <th>Email Id</th>
+        <th>Mobile Number</th>
+        <th>Date of Joining</th>
+        <th>Department</th>
+        <th>Leave Balance</th>
+        <th>Manager Id</th> 
+        <th>Login</th>
+    </tr>
+    <tr *ngFor="let e of emps | async">
+        <td>{{e.empId}}</td>
+        <td>{{e.fullName}}</td>
+        <td>{{e.emailId}}</td>
+        <td>{{e.mobNo}}</td>
+        <td>{{e.doj}}</td>
+        <td>{{e.empDpt}}</td>
+        <td>{{e.leaveBal}}</td>
+        <td>{{e.mgrId}}</td>
+        <td><input type="button" value="Login" (click)="show(e.empId, e.mgrId)" /> </td>
+    </tr>
+</table>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 align = "center">Apply Leave</h1><hr>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Enter Start Date</label>
+            <input type="date" class="form-control" id="inputEmail4" name="leave.startDate" [(ngModel)] = "leave.startDate"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Enter End Date</label>
+            <input type="date" class="form-control" id="inputPassword4" name="leave.endDate" [(ngModel)] = "leave.endDate"/>
+          </div>
+        </div>
+        <div class="form-group">
+            <label>Select leave type</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="leave.leaveType" [(ngModel)] = "leave.leaveType">
+              <option value="SL">SL</option>
+              <option value="ML">ML</option>
+              <option value="EL">EL</option>
+            </select>
+          </div>
+        <div class="form-group">
+          <label for="inputAddress2">Enter leave reason</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Enter Leave Reason." name="leave.leaveReason" [(ngModel)] = "leave.leaveReason"/>
+        </div>
+        <div class="text-center">
+          <input type="button" class="btn btn-success" value="Apply Leave" (click)="applyLeave()">
+        </div>
+      </form>
+      <br><br>
+      <div class="text-center">
+        <b style="color: darkred;">{{result}}</b>
+      </div>
+      
+</body>
+</html>
+
+
+
+
+
+    

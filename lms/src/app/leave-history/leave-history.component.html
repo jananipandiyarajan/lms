@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 align="center">LEAVE HISTORY</h1>
+<table align="center" class="table table-hover table-dark">
+    <tr>
+        <th scope="col">Leave Id</th>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Number of Days</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Leave Type</th>
+        <th scope="col">Leave Status</th>
+        <th scope="col">Leave Reason</th> 
+        <th scope="col">Applied On</th>
+        <th scope="col">Manager Comment</th>
+    </tr>
+    <tr *ngFor="let e of leaveHistory | async">
+        <td scope="row">{{e.leaveId}}</td>
+        <td scope="row">{{e.empId}}</td>
+        <td scope="row">{{e.numOfDays}}</td>
+        <td scope="row">{{e.startDate}}</td>
+        <td scope="row">{{e.endDate}}</td>
+        <td scope="row">{{e.leaveType}}</td>
+        <td scope="row">{{e.leaveStatus}}</td>
+        <td scope="row">{{e.leaveReason }}</td>
+        <td scope="row">{{e.appliedOn}}</td>
+        <td scope="row">{{e.managerComment }}</td>
+    </tr>
+</table>
+</body>
+</html>
